@@ -1,7 +1,7 @@
 const About = () => {
   return (
     <section  id="about" className="py-20 px-6 max-w-4xl mx-auto">
-      <h2 className="text-3xl font-semibold mb-6">About Me</h2>
+      <h2 className="text-3xl font-semibold mb-6 text-red-500">About Me</h2>
 
       <p className="text-gray-400 leading-relaxed">
         I am a passionate and detail-oriented frontend developer with a strong interest in building modern, responsive, and user-friendly web applications. I enjoy transforming ideas into functional digital experiences, using technologies such as React, JavaScript, and Tailwind CSS to create clean and visually appealing interfaces.
