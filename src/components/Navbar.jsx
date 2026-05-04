@@ -6,7 +6,7 @@ const Navbar = () => {
 
       <div className="flex gap-6 text-gray-300">
         <a href="#home" className="hover:text-white transition">Home</a>
-        <a href="#about" className="hover:text-black transition">About</a>
+        <a href="#about" className="hover:text-white transition">About</a>
         <a href="#projects" className="hover:text-white transition">Projects</a>
         <a href="#contact" className="hover:text-white transition">Contact</a>
       </div>
