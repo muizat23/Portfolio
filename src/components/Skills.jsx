@@ -1,46 +1,22 @@
-import { motion, useInView } from "framer-motion";
-import { useRef } from "react";
+import { motion } from "framer-motion";
 
 const skills = [
-  { name: "HTML & CSS", level: 90, gradient: "from-orange-500 to-orange-400" },
-  { name: "JavaScript", level: 80, gradient: "from-yellow-500 to-yellow-400" },
-  { name: "React", level: 85, gradient: "from-blue-400 to-cyan-400" },
-  { name: "Tailwind CSS", level: 85, gradient: "from-teal-500 to-cyan-500" },
-  { name: "React Native", level: 70, gradient: "from-purple-500 to-violet-500" },
-  { name: "Git & GitHub", level: 75, gradient: "from-gray-400 to-gray-300" },
+  { name: "HTML & CSS", icon: "🌐", color: "from-orange-500/20 to-orange-400/10 border-orange-500/30 text-orange-400" },
+  { name: "JavaScript", icon: "⚡", color: "from-yellow-500/20 to-yellow-400/10 border-yellow-500/30 text-yellow-400" },
+  { name: "TypeScript", icon: "🔷", color: "from-blue-600/20 to-blue-400/10 border-blue-500/30 text-blue-400" },
+  { name: "React", icon: "⚛️", color: "from-cyan-500/20 to-cyan-400/10 border-cyan-500/30 text-cyan-400" },
+  { name: "Next.js", icon: "▲", color: "from-gray-500/20 to-gray-400/10 border-gray-500/30 text-gray-300" },
+  { name: "Tailwind CSS", icon: "🎨", color: "from-teal-500/20 to-teal-400/10 border-teal-500/30 text-teal-400" },
+  { name: "React Native", icon: "📱", color: "from-purple-500/20 to-purple-400/10 border-purple-500/30 text-purple-400" },
+  { name: "Git & GitHub", icon: "🔧", color: "from-gray-400/20 to-gray-300/10 border-gray-400/30 text-gray-300" },
+  { name: "Vite", icon: "🚀", color: "from-violet-500/20 to-violet-400/10 border-violet-500/30 text-violet-400" },
+  { name: "Figma", icon: "🎭", color: "from-pink-500/20 to-pink-400/10 border-pink-500/30 text-pink-400" },
 ];
-
-const techStack = [
-  "React", "React Native", "JavaScript", "HTML", "CSS",
-  "Tailwind CSS", "Git", "GitHub", "Vite", "Figma",
-];
-
-const SkillBar = ({ name, level, gradient, delay }) => {
-  const ref = useRef(null);
-  const inView = useInView(ref, { once: true });
-
-  return (
-    <div ref={ref} className="mb-6">
-      <div className="flex justify-between mb-2">
-        <span className="text-white font-medium">{name}</span>
-        <span className="text-purple-400 text-sm font-semibold">{level}%</span>
-      </div>
-      <div className="w-full bg-gray-800 rounded-full h-2">
-        <motion.div
-          className={`bg-gradient-to-r ${gradient} h-2 rounded-full`}
-          initial={{ width: 0 }}
-          animate={inView ? { width: `${level}%` } : { width: 0 }}
-          transition={{ duration: 1.2, delay, ease: "easeOut" }}
-        />
-      </div>
-    </div>
-  );
-};
 
 const Skills = () => {
   return (
     <section id="skills" className="py-20 px-6 bg-gray-950">
-      <div className="max-w-3xl mx-auto">
+      <div className="max-w-4xl mx-auto">
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -51,31 +27,22 @@ const Skills = () => {
           Skills
         </motion.h2>
 
-        <div>
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-4">
           {skills.map((skill, i) => (
-            <SkillBar key={skill.name} {...skill} delay={i * 0.1} />
+            <motion.div
+              key={skill.name}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.4, delay: i * 0.05 }}
+              whileHover={{ scale: 1.07, y: -4 }}
+              className={`bg-gradient-to-br ${skill.color} border rounded-2xl p-5 flex flex-col items-center gap-2 cursor-default transition duration-300`}
+            >
+              <span className="text-3xl">{skill.icon}</span>
+              <span className="text-sm font-medium text-white text-center">{skill.name}</span>
+            </motion.div>
           ))}
         </div>
-
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.4 }}
-          className="mt-12"
-        >
-          <p className="text-gray-500 text-xs uppercase tracking-widest mb-4">Tech Stack</p>
-          <div className="flex flex-wrap gap-3">
-            {techStack.map((tech) => (
-              <span
-                key={tech}
-                className="px-4 py-2 bg-gray-800 border border-gray-700 hover:border-purple-500 rounded-full text-sm text-gray-300 hover:text-purple-400 transition duration-300"
-              >
-                {tech}
-              </span>
-            ))}
-          </div>
-        </motion.div>
       </div>
     </section>
   );
