@@ -8,7 +8,7 @@ const projects = [
     tags: ["React", "REST API", "Tailwind CSS"],
     gradient: "from-orange-500 to-red-500",
     route: "/food",
-    github: "https://github.com/muizat23/",
+    github: "https://github.com/muizat23?tab=repositories",
     live: null,
   },
   {
@@ -17,7 +17,7 @@ const projects = [
     tags: ["React", "Recharts", "Tailwind CSS"],
     gradient: "from-green-600 to-emerald-500",
     route: "/fitness",
-    github: "https://github.com/muizat23/",
+    github: "https://github.com/muizat23?tab=repositories",
     live: null,
   },
   {
@@ -26,7 +26,7 @@ const projects = [
     tags: ["React", "Tailwind CSS"],
     gradient: "from-yellow-500 to-orange-500",
     route: "/electricity",
-    github: "https://github.com/muizat23/",
+    github: "https://github.com/muizat23?tab=repositories",
     live: null,
   },
   {
@@ -35,16 +35,16 @@ const projects = [
     tags: ["React", "Tailwind CSS", "Framer Motion"],
     gradient: "from-teal-600 to-cyan-600",
     route: "/landing",
-    github: "https://github.com/muizat23/",
+    github: "https://github.com/muizat23?tab=repositories",
     live: null,
   },
   {
-    title: "Dashboard UI",
-    description: "A clean dashboard interface with cards and structured layout.",
-    tags: ["React", "UI Components"],
-    gradient: "from-violet-600 to-pink-600",
-    route: null,
-    github: "https://github.com/muizat23/",
+    title: "E-Commerce Store",
+    description: "A full shopping experience with product grid, category filters, cart drawer, and product modals.",
+    tags: ["React", "Tailwind CSS", "Framer Motion"],
+    gradient: "from-blue-600 to-indigo-600",
+    route: "/shop",
+    github: "https://github.com/muizat23?tab=repositories",
     live: null,
   },
 ];
@@ -113,14 +113,6 @@ const Projects = () => {
                       View Project
                     </a>
                   )}
-                  <a
-                    href={project.github}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-purple-400 hover:text-purple-300 text-sm underline underline-offset-2"
-                  >
-                    GitHub
-                  </a>
                 </div>
               </div>
             </motion.div>

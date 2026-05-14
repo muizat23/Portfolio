@@ -24,7 +24,7 @@ const Skills = () => {
           transition={{ duration: 0.6 }}
           className="text-3xl font-semibold mb-12 text-purple-400"
         >
-          Skills
+          Skills & Technologies
         </motion.h2>
 
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-4">

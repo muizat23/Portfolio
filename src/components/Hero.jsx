@@ -11,17 +11,17 @@ const Hero = () => {
         transition={{ duration: 0.8 }}
         className="relative z-10 flex flex-col items-center"
       >
-        <h1 className="text-5xl md:text-7xl font-extrabold mb-4 text-white">
+        <h1 className="text-3xl md:text-5xl font-bold mb-4 text-white">
           Muizat Hammed
         </h1>
 
         <p className="text-lg md:text-2xl text-purple-400 mb-6 font-medium">
-          Frontend Developer | React & React Native
+          Frontend Developer
         </p>
 
-        <p className="text-gray-400 max-w-md mb-10">
+        {/* <p className="text-gray-400 max-w-md mb-10">
           I build responsive and modern web & mobile applications.
-        </p>
+        </p> */}
 
         <div className="flex gap-4">
           <a
@@ -31,12 +31,10 @@ const Hero = () => {
             View Projects
           </a>
           <a
-            href="https://github.com/muizat23/"
-            target="_blank"
-            rel="noopener noreferrer"
+            href="#projects"
             className="px-6 py-3 border border-gray-600 hover:border-purple-500 hover:text-purple-400 rounded-full transition duration-300"
           >
-            GitHub
+            Portfolio
           </a>
         </div>
       </motion.div>
