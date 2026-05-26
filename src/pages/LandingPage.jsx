@@ -1,5 +1,4 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 
 const features = [
@@ -67,9 +66,6 @@ export default function LandingPage() {
         <div className="flex items-center gap-4">
           <a href="#features" className="text-sm text-gray-400 hover:text-white transition hidden sm:block">Features</a>
           <a href="#pricing" className="text-sm text-gray-400 hover:text-white transition hidden sm:block">Pricing</a>
-          <Link to="/" className="text-sm text-gray-400 hover:text-purple-400 transition border border-gray-700 hover:border-purple-500 px-4 py-1.5 rounded-full">
-            ← Portfolio
-          </Link>
         </div>
       </nav>
 

@@ -1,5 +1,4 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
 
 const PRESETS = [1000, 2000, 5000, 10000, 20000];
 
@@ -63,9 +62,6 @@ export default function ElectricityPayment() {
             <span className="text-yellow-400"><BoltIcon /></span>
             <h1 className="text-2xl font-bold text-white">Electricity Pay</h1>
           </div>
-          <Link to="/" className="text-sm text-gray-400 hover:text-purple-400 transition border border-gray-700 hover:border-purple-500 px-4 py-2 rounded-full">
-            ← Back
-          </Link>
         </div>
 
         {/* Step: Form */}

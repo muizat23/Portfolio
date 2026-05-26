@@ -1,5 +1,4 @@
 import { useState, useRef } from "react";
-import { Link } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 
 const PRODUCTS = [
@@ -385,12 +384,6 @@ export default function EcommerceApp() {
       {/* Header */}
       <div className="sticky top-0 bg-gray-950/90 backdrop-blur-md border-b border-gray-800 z-40 px-6 py-4">
         <div className="max-w-6xl mx-auto flex items-center gap-4 flex-wrap">
-          <Link
-            to="/"
-            className="text-sm text-gray-400 hover:text-purple-400 transition border border-gray-700 hover:border-purple-500 px-4 py-1.5 rounded-full whitespace-nowrap"
-          >
-            ← Back
-          </Link>
           <h1 className="text-xl font-bold text-white">🛍️ ShopEase</h1>
           <input
             type="text"

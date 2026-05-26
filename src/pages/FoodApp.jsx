@@ -1,5 +1,4 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 
 const MEALS = [
@@ -189,9 +188,6 @@ export default function FoodApp() {
             onChange={(e) => setQuery(e.target.value)}
             className="flex-1 max-w-sm bg-gray-900 border border-gray-700 rounded-full px-4 py-2 text-sm text-white focus:outline-none focus:border-green-500"
           />
-          <Link to="/" className="text-sm text-gray-400 hover:text-purple-400 transition border border-gray-700 hover:border-purple-500 px-4 py-1.5 rounded-full">
-            ← Back
-          </Link>
         </div>
       </div>
 

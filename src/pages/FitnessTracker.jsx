@@ -1,5 +1,4 @@
 import { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
 
 const EXERCISES = ["Bench Press", "Squat", "Deadlift", "Pull Up", "Shoulder Press", "Bicep Curl", "Tricep Dip", "Plank"];
 const defaultForm = { exercise: EXERCISES[0], sets: "", reps: "", weight: "" };
@@ -76,9 +75,6 @@ export default function FitnessTracker() {
             <h1 className="text-3xl font-bold text-purple-400">Fitness Tracker</h1>
             <p className="text-gray-500 text-sm mt-1">Log your workouts and track progress</p>
           </div>
-          <Link to="/" className="text-sm text-gray-400 hover:text-purple-400 transition border border-gray-700 hover:border-purple-500 px-4 py-2 rounded-full">
-            ← Back
-          </Link>
         </div>
 
         {/* Stats */}
