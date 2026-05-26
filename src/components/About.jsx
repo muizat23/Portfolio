@@ -21,7 +21,7 @@ const About = () => {
           transition={{ duration: 0.6, delay: 0.1 }}
           className="text-gray-300 leading-relaxed mb-4"
         >
-          I am a passionate and detail-oriented frontend developer with a strong interest in building modern, responsive, and user-friendly web applications. I enjoy transforming ideas into functional digital experiences using React, JavaScript, and Tailwind CSS to create clean and visually appealing interfaces.
+          I'm Muizat Hammed, a frontend developer based in Oyo, Nigeria. I build modern, responsive web applications that are clean, fast, and easy to use. My go-to tools are React, JavaScript, and Tailwind CSS — and I genuinely enjoy the process of turning an idea into something people can actually interact with.
         </motion.p>
 
         <motion.p
@@ -31,7 +31,7 @@ const About = () => {
           transition={{ duration: 0.6, delay: 0.2 }}
           className="text-gray-300 leading-relaxed mb-4"
         >
-          As a student of Ladoke Akintola University of Technology, I have developed a solid foundation in web development and continuously strive to improve my skills by working on practical projects — including an eCommerce platform to better understand application structure, user interaction, and performance optimization.
+          I'm currently a student at Ladoke Akintola University of Technology (LAUTECH). I've built projects ranging from a Nigerian food finder app and a fitness tracker to a full e-commerce store with a working cart — each one pushing me to think more deeply about how users experience the web.
         </motion.p>
 
         <motion.p
@@ -41,7 +41,7 @@ const About = () => {
           transition={{ duration: 0.6, delay: 0.3 }}
           className="text-gray-300 leading-relaxed"
         >
-          I am highly motivated, adaptable, and committed to continuous learning. I am currently seeking internship opportunities where I can apply my knowledge, gain hands-on experience, and contribute to meaningful projects while growing as a developer.
+          I'm currently looking for internship opportunities where I can contribute, learn from experienced developers, and grow. If you're working on something interesting, I'd love to be part of it.
         </motion.p>
       </div>
     </section>
