@@ -3,6 +3,15 @@ import { Link } from "react-router-dom";
 
 const projects = [
   {
+    title: "Job Tracker",
+    description: "A full-stack job application tracker with auth, status pipeline, charts, and Supabase backend. Built in TypeScript.",
+    tags: ["React", "TypeScript", "Supabase", "Recharts"],
+    gradient: "from-purple-600 to-violet-600",
+    route: null,
+    github: "https://github.com/muizat23/job-tracker",
+    live: "https://job-tracker-snowy-three.vercel.app/",
+  },
+  {
     title: "Food Finder",
     description: "Browse and search real recipes by category using the MealDB API, with full meal details and ingredients.",
     tags: ["React", "REST API", "Tailwind CSS"],
@@ -18,7 +27,7 @@ const projects = [
     gradient: "from-green-600 to-emerald-500",
     route: null,
     github: "https://github.com/muizat23?tab=repositories",
-    live: "https://fitness-tracker-pj5cpnt7v-muizat23s-projects.vercel.app/",
+    live: "https://fitness-tracker-okvc.vercel.app/",
   },
   {
     title: "Electricity Payment UI",
@@ -34,18 +43,18 @@ const projects = [
     description: "A SaaS product landing page with hero, features, and pricing sections.",
     tags: ["React", "Tailwind CSS", "Framer Motion"],
     gradient: "from-teal-600 to-cyan-600",
-    route: "/landing",
+    route: null,
     github: "https://github.com/muizat23?tab=repositories",
-    live: null,
+    live: "https://landingpage-gamma-six-24.vercel.app/",
   },
   {
     title: "E-Commerce Store",
     description: "A full shopping experience with product grid, category filters, cart drawer, and product modals.",
     tags: ["React", "Tailwind CSS", "Framer Motion"],
     gradient: "from-blue-600 to-indigo-600",
-    route: "/shop",
+    route: null,
     github: "https://github.com/muizat23?tab=repositories",
-    live: null,
+    live: "https://ecommercesite-one-liart.vercel.app/",
   },
 ];
 
@@ -63,7 +72,7 @@ const Projects = () => {
           Projects
         </motion.h2>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {projects.map((project, i) => (
             <motion.div
               key={project.title}
@@ -100,7 +109,7 @@ const Projects = () => {
                       to={project.route}
                       className="text-purple-400 hover:text-purple-300 text-sm underline underline-offset-2"
                     >
-                      View Project
+                      Live Demo
                     </Link>
                   )}
                   {project.live && (
@@ -110,7 +119,17 @@ const Projects = () => {
                       rel="noopener noreferrer"
                       className="text-purple-400 hover:text-purple-300 text-sm underline underline-offset-2"
                     >
-                      View Project
+                      Live Demo
+                    </a>
+                  )}
+                  {project.github && (
+                    <a
+                      href={project.github}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-gray-400 hover:text-white text-sm underline underline-offset-2"
+                    >
+                      GitHub
                     </a>
                   )}
                 </div>
