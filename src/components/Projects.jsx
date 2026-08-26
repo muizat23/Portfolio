@@ -1,57 +1,81 @@
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 
+import jobTrackerImage from "../assets/images/job-tracker.png";
+import foodFinderImage from "../assets/images/food-finder.png";
+import fitnessTrackerImage from "../assets/images/fitness-tracker.png";
+import electricityImage from "../assets/images/electricity.png";
+import landingPageImage from "../assets/images/landing-page.png";
+import ecommerceImage from "../assets/images/ecommerce.png";
+import laslesVpnImage from "../assets/images/lasles-vpn.png";
+
 const projects = [
   {
+    title: "LaslesVPN",
+    description:
+      "A responsive VPN landing page with authentication, pricing, testimonials, and password reset powered by Supabase.",
+    tags: ["React", "Tailwind CSS", "Supabase", "React Router"],
+    image: laslesVpnImage,
+    route: null,
+    github: "https://github.com/muizat23/lasles-vpn",
+    live: "https://lasles-vpn-wiw2.vercel.app/",
+  },
+  {
     title: "Job Tracker",
-    description: "A full-stack job application tracker with auth, status pipeline, charts, and Supabase backend. Built in TypeScript.",
+    description:
+      "A full-stack job application tracker with auth, status pipeline, charts, and Supabase backend. Built in TypeScript.",
     tags: ["React", "TypeScript", "Supabase", "Recharts"],
-    gradient: "from-purple-600 to-violet-600",
+    image: jobTrackerImage,
     route: null,
     github: "https://github.com/muizat23/job-tracker",
     live: "https://job-tracker-snowy-three.vercel.app/",
   },
   {
     title: "Food Finder",
-    description: "Browse and search real recipes by category using the MealDB API, with full meal details and ingredients.",
+    description:
+      "Browse and search real recipes by category using the MealDB API, with full meal details and ingredients.",
     tags: ["React", "REST API", "Tailwind CSS"],
-    gradient: "from-orange-500 to-red-500",
+    image: foodFinderImage,
     route: null,
     github: "https://github.com/muizat23?tab=repositories",
     live: "https://food-app-woad-nine.vercel.app/",
   },
   {
     title: "Fitness Tracker",
-    description: "A workout logging app with progress charts, exercise history, and local storage persistence.",
+    description:
+      "A workout logging app with progress charts, exercise history, and local storage persistence.",
     tags: ["React", "Recharts", "Tailwind CSS"],
-    gradient: "from-green-600 to-emerald-500",
+    image: fitnessTrackerImage,
     route: null,
     github: "https://github.com/muizat23?tab=repositories",
     live: "https://fitness-tracker-okvc.vercel.app/",
   },
   {
     title: "Electricity Payment UI",
-    description: "A full electricity payment flow with meter input, preset amounts, confirmation, and transaction history.",
+    description:
+      "A full electricity payment flow with meter input, preset amounts, confirmation, and transaction history.",
     tags: ["React", "Tailwind CSS"],
-    gradient: "from-yellow-500 to-orange-500",
+    image: electricityImage,
     route: null,
     github: "https://github.com/muizat23?tab=repositories",
     live: "https://electricitypayment-u2n6.vercel.app/",
   },
   {
     title: "Landing Page",
-    description: "A SaaS product landing page with hero, features, and pricing sections.",
+    description:
+      "A SaaS product landing page with hero, features, and pricing sections.",
     tags: ["React", "Tailwind CSS", "Framer Motion"],
-    gradient: "from-teal-600 to-cyan-600",
+    image: landingPageImage,
     route: null,
     github: "https://github.com/muizat23?tab=repositories",
     live: "https://landingpage-gamma-six-24.vercel.app/",
   },
   {
     title: "E-Commerce Store",
-    description: "A full shopping experience with product grid, category filters, cart drawer, and product modals.",
+    description:
+      "A full shopping experience with product grid, category filters, cart drawer, and product modals.",
     tags: ["React", "Tailwind CSS", "Framer Motion"],
-    gradient: "from-blue-600 to-indigo-600",
+    image: ecommerceImage,
     route: null,
     github: "https://github.com/muizat23?tab=repositories",
     live: "https://ecommercesite-one-liart.vercel.app/",
@@ -82,16 +106,26 @@ const Projects = () => {
               transition={{ duration: 0.5, delay: i * 0.1 }}
               className="bg-gray-950 rounded-xl border border-gray-800 overflow-hidden hover:border-purple-500/50 hover:scale-105 transition duration-300"
             >
-              <div className={`bg-gradient-to-br ${project.gradient} h-40 flex items-center justify-center`}>
-                <span className="text-white/80 text-base font-semibold px-4 text-center">
-                  {project.title}
-                </span>
+              {/* Project Image */}
+              <div className="h-40 overflow-hidden bg-gray-800">
+                <img
+                  src={project.image}
+                  alt={`${project.title} preview`}
+                  className="w-full h-full object-cover transition duration-500 hover:scale-105"
+                />
               </div>
 
+              {/* Project Details */}
               <div className="p-5">
-                <h3 className="text-base font-semibold mb-2 text-white">{project.title}</h3>
-                <p className="text-gray-400 mb-4 text-xs leading-relaxed">{project.description}</p>
+                <h3 className="text-base font-semibold mb-2 text-white">
+                  {project.title}
+                </h3>
 
+                <p className="text-gray-400 mb-4 text-xs leading-relaxed">
+                  {project.description}
+                </p>
+
+                {/* Tags */}
                 <div className="flex flex-wrap gap-1.5 mb-4">
                   {project.tags.map((tag) => (
                     <span
@@ -103,6 +137,7 @@ const Projects = () => {
                   ))}
                 </div>
 
+                {/* Links */}
                 <div className="flex gap-4">
                   {project.route && (
                     <Link
@@ -112,6 +147,7 @@ const Projects = () => {
                       Live Demo
                     </Link>
                   )}
+
                   {project.live && (
                     <a
                       href={project.live}
@@ -122,6 +158,7 @@ const Projects = () => {
                       Live Demo
                     </a>
                   )}
+
                   {project.github && (
                     <a
                       href={project.github}
