@@ -1,7 +1,6 @@
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 
-import jobTrackerImage from "../assets/images/job-tracker.png";
 import foodFinderImage from "../assets/images/food-finder.png";
 import fitnessTrackerImage from "../assets/images/fitness-tracker.png";
 import electricityImage from "../assets/images/electricity.png";
@@ -19,16 +18,6 @@ const projects = [
     route: null,
     github: "https://github.com/muizat23/lasles-vpn",
     live: "https://lasles-vpn-wiw2.vercel.app/",
-  },
-  {
-    title: "Job Tracker",
-    description:
-      "A full-stack job application tracker with auth, status pipeline, charts, and Supabase backend. Built in TypeScript.",
-    tags: ["React", "TypeScript", "Supabase", "Recharts"],
-    image: jobTrackerImage,
-    route: null,
-    github: "https://github.com/muizat23/job-tracker",
-    live: "https://job-tracker-snowy-three.vercel.app/",
   },
   {
     title: "Food Finder",
